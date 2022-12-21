@@ -1,0 +1,44 @@
+
+<div >
+
+  <h1 class="user">New user</h1>
+  <form class="d-flex row container-fluid " [formGroup]="adminForm" (ngSubmit)="onSubmit()">
+
+    <div class="form-group col ">
+      <mat-form-field appearance="outline">
+        <mat-label>First Name</mat-label>
+      <input   matInput placeholder="First Name" formControlName="firstName">
+      </mat-form-field>
+    </div>
+    <br>
+
+    <div class="form-group col">
+      <mat-form-field appearance="outline">
+        <mat-label>Last Name</mat-label>
+        <input   matInput placeholder="Last Name" formControlName="lastName">
+      </mat-form-field>
+    </div>
+    <br>
+
+    <div class="form-group col">
+      <mat-form-field appearance="outline">
+        <mat-label>Email</mat-label>
+        <input  matInput placeholder="Email" formControlName="email">
+      </mat-form-field>
+    </div>
+    <br>
+
+    <div class="form-group col">
+      <mat-form-field appearance="outline">
+        <mat-label>Phone No.</mat-label>
+        <input   matInput placeholder="Phone No." formControlName="phone" maxlength="10">
+      </mat-form-field>
+    </div>
+    <br>
+
+    <div class="col-1 mt-3">
+      <button type="submit" class="btn btn-primary" [disabled]="!adminForm.valid">Submit</button>
+    </div>
+  </form>
+</div>
+
